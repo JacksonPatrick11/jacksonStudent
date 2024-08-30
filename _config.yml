@@ -1,9 +1,9 @@
-title: Nighthawk Pages 
+title: Jackson's Page
 description: "Class of 2025"
-owner_name: John Mortensen
-github_username: nighthawkcoders
-github_repo: "student_2025" 
-baseurl: "/student_2025"
+owner_name: Jackson Patrick
+github_username: jacksonpatrick11
+github_repo: "jacksonStudent" 
+baseurl: "/jacksonStudent"
 future: true
 remote_theme: jekyll/minima
 minima:
@@ -23,4 +23,7 @@ header_pages:
   - navigation/blog.md
   - navigation/search.md
   - navigation/about.md
+  - navigation/Tools_and_setup.md
   - README4YML.md
+  - navigation/pll.md
+  
