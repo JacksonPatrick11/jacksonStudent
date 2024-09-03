@@ -47,63 +47,33 @@ hide: true
 
 
 
-<div>
 
-<!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Prevents scrollbars */
-        }
-
-        .dog-container {
+        img {
             position: fixed;
             bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: flex-start; /* Start from the left */
-            align-items: center;
-            animation: moveRight 5s linear infinite alternate; /* Move back and forth */
+            left: 0;
+            width: 100px;
+            height: 100px;
+            animation: walk 10s linear infinite;
         }
-
-        .dog {
-            display: flex;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            font-size: 2em;
-            font-weight: bold;
-        }
-
-        .dog img {
-            width: 50px; /* Adjust size as needed */
-            height: auto;
-            margin-right: 10px;
-        }
-
-        @keyframes moveRight {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(calc(100vw - 60px)); /* Moves across the screen */
-            }
+        @keyframes walk {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(calc(100vw + 100px)); }
         }
     </style>
 </head>
 <body>
-    <div class="dog-container">
-        <div class="dog">
-            <img src="https://media2.giphy.com/media/SqeYW7O2ppikWbffph/giphy.gif?cid=6c09b952s9pei7plyvmsa75oddtadg63yomxzp9dgx88b5ej&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s" alt="Dog">
-            <span>Welcome</span>
-        </div>
-    </div>
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/eb3b5a4f-6de2-4e44-8b57-ea55bc65fc86/dckxbxg-db6c8283-8e87-497b-92bc-f1f2be4a57cf.gif" alt="Mushroom walking"> 
 </body>
 </html>
 
 
-</div>
+
+
