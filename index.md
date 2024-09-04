@@ -6,7 +6,7 @@ hide: true
 ---
 
 
-
+<!-- title page saying welcome to jackosns page -->
 <center>
 
 
@@ -18,7 +18,7 @@ hide: true
         @keyframes colorChange {
             0% { color: red; }
             25% { color: orange; }
-            50% { color: yellow; }
+            50% { color: purple; }
             75% { color: green; }
             100% { color: blue; }
         }
@@ -40,15 +40,83 @@ hide: true
 
 </center>
 
+<!-- button and links -->
+<div class="wrapper-outline">
+    <div class="container">
+        <p>This is a paragraph</p>
+        <button onclick="alert('This is a button!')">button</button>
+        <div class="top-float-div">div</div>
+    </div>
 
+    <div class="container">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">a</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">a</a>
+        <div>div</div>
+        <p>This is a paragraph</p>
+    </div>
+</div>
 
+<style>
+.wrapper-outline {
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+}
 
+.container {
+    width: 500px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+}
 
+.top-float-div {
+    position: absolute;
+    left: 49%;
+    top: 30%;
+    color: black !important;
+    text-align: center;
+}
 
+.container p {
+    border: 2px solid red;
+    color: red !important;
+    padding: 5px;
+    margin: 10px 0;
+}
 
+.container button {
+    border: 2px solid lime;
+    background-color: white !important;
+    color: lime !important;
+    padding: 5px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+}
 
+.container button:hover {
+    background-color: lime !important;
+    color: white !important;
+}
 
+.container a {
+    display: block;
+    border: 2px solid blue;
+    color: blue !important;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px 0;
+    text-align: center;
+}
 
+.container a:hover {
+    background-color: blue !important;
+    color: white !important;
+}
+</style>
+
+<!-- mario runing code -->
 
 <html lang="en">
 <head>
