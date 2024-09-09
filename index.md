@@ -10,12 +10,15 @@ hide: true
 <center>
 
 
-<h1 style="color:red;">Welcome to Jackson's Page</h1>
+<h1 style="color:red; font-family:'Courier New', monospace;">Welcome to Jackson's Page</h1>
 
 
 
 </center>
 
+
+
+😀
 
 
 
@@ -56,7 +59,7 @@ hide: true
 <style>
   img {
     position: fixed;
-    bottom: 0;
+    bottom: 0;              
     left: 0;
     width: 120px;
     height: 120px;

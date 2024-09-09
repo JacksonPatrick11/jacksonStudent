@@ -5,7 +5,7 @@ github_username: jacksonpatrick11
 github_repo: "jacksonStudent" 
 baseurl: "/jacksonStudent"
 future: true
-remote_theme: jekyll/minima
+remote_theme: pages-themes/cayman@v0.2.0
 minima:
   skin: dark
   social_links:

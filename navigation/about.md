@@ -10,10 +10,10 @@ permalink: /about/
 I'm Jackson, a junior at Del Norte High School. I'm passionate about sports, gaming, and spending time outdoors. When I'm not studying, you can find me wrestling, hanging out at the beach, or playing video games.
 
 ## Interests
-- **Sports**: Wrestling, beach volleyball, basketball
-- **Outdoor Activities**: Enjoying the beach, hiking
-- **Gaming**: Favorites include Minecraft, Fortnite, Among Us
-- **Hobbies**: Hanging out with friends, exploring new places
+- **Sports**: Wrestling, beach volleyball, basketball ⚽
+- **Outdoor Activities**: Enjoying the beach, hiking 🏖️
+- **Gaming**: Favorites include Minecraft, Fortnite, Among Us 🎮 
+- **Hobbies**: Hanging out with friends, exploring new places 🌲
 
 ## Pets
 I have two pugs that are full of energy and love to play. 

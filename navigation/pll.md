@@ -2,7 +2,7 @@
 layout: page
 title: PLL
 description: PLL fanpage
-hide: true
+hide: false
 ---
 
 
@@ -18,9 +18,16 @@ Welcome to the **Premier Lacrosse League (PLL)** fan page! Explore detailed info
 
 ## Sections
 
-- [Teams](../sections/teams.md)
-- [Top Players](../sections/top_players.md)
-- [Past Winners](../sections/past_winners.md)
+
+
+<a href="../sections/teams.md" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Teams</a>
+
+<a href="Past Winners" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Teams</a>
+
+<a href="../sections/past_winners.md" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">past winners </a>
+
+
+
 
 
 
