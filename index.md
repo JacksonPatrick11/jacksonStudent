@@ -10,18 +10,36 @@ hide: true
 <center>
 
 
-<h1 style="color:red; font-family:'Courier New', monospace;">Welcome to Jackson's Page</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson's Page</title>
+    <style>
+        .title {
+            font-family: 'Pacifico', cursive;
+            color: #ff6347;
+            font-size: 3em;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+</head>
+<body>
+    <div class="title">Welcome to Jackson's Page</div>
+</body>
+</html>
 
 
 
 </center>
 
+<a href="notebook1" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Notebook 1</a>
 
+<a href="notebook2" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Notebook 2</a>
 
-😀
-
-
-
+<a href="notebook3" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Notebook 3</a>
 
 <!-- button -->
 
@@ -72,5 +90,26 @@ hide: true
 </style>
 
 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add any other head elements here -->
+</head>
+<body>
+    <!-- Your existing content goes here -->
+
+    <!-- Utterances comments script -->
+    <script src="https://utteranc.es/client.js"
+            repo="Mom5MoreMins/aranya_student_2025"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+</body>
+</html>
 
 
