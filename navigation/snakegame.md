@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post
 title: Snake Game
 ---
 
@@ -297,6 +297,9 @@ title: Snake Game
             addFood();
             // activate canvas event
             canvas.onkeydown = function(evt) {
+                if ([32, 37, 38, 39, 40].indexOf(evt.keyCode) > -1) {
+                    evt.preventDefault()
+                }
                 changeDir(evt.keyCode);
             }
             mainLoop();
