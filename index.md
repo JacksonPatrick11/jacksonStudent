@@ -115,7 +115,15 @@ hide: true
 
 
 
-
+<div>
+<table>
+    <tr>
+        <td><a href="{{site.baseurl}}/pythonnotebook/">Challenges</a></td>
+        <td><a href="{{site.baseurl}}/javascript/">Python </a></td>
+        <td><a href="{{site.baseurl}}/thingy/">JS</a></td>
+ </tr>
+</table>
+</div>
 
 
 ## Gaming Submenu
@@ -160,11 +168,6 @@ hide: true
     <a href="navigation/snakegame.html" style="background-color: Teal; color: white;">Snake Game</a>
   </div>
 </div>
-
-
-
-
-
 
 
 
