@@ -156,7 +156,7 @@ hide: true
   </button>
   <div class="dropdown-content">
     <a href="navigation/cookieclicker.html" style="background-color: Blue; color: white;">Cookie Clicker</a>
-    <a href="navigation/binarycalculator.html" style="background-color: Red; color: white;">Binary Calculator</a>
+    <a href="navigation/Binarycalculator.html" style="background-color: Red; color: white;">Binary Calculator</a>
     <a href="navigation/snakegame.html" style="background-color: Teal; color: white;">Snake Game</a>
   </div>
 </div>
