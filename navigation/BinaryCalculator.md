@@ -1,6 +1,4 @@
 
-
-
 ---
 layout: page
 title: Binary Calculator
