@@ -14,7 +14,12 @@ Feel free to explore! 💻
 <p style="font-size: 16px; color: purple;">Click on the links below to explore the homework assignments:</p>
 
 <!-- Insert your links here -->
-[3.3/3.5 Homework Submission](3.3_3.5_LessonHW.md)
+- [3.3/3.5 Homework Submission](3.3_3.5_LessonHW.md)
+- [3.8 Homework Submission](3.8_hw.md)
+
+ 
+
+
 
 
 ---
