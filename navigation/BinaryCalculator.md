@@ -1,9 +1,5 @@
 
----
-layout: page
-title: Binary Calculator
-permalink: /Binary Calculator/
----
+
 
 
 

@@ -1,9 +1,4 @@
 
----
-layout: page
-title: Cookie Clicker
-permalink: /Cookie Clicker/
----
 
 
 

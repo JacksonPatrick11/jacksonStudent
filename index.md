@@ -4,7 +4,7 @@ title: Student Home
 description: Home Page
 hide: true
 ---
-
+[Homework For CSP lessons](lesson_hw.md)
 
 <!-- title page saying welcome to jackosns page -->
 <center>
