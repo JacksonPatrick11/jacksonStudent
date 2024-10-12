@@ -16,6 +16,8 @@ Feel free to explore! 💻
 <!-- Insert your links here -->
 - [3.3/3.5 Homework Submission](3.3_3.5_LessonHW.md)
 - [3.8 Homework Submission](3.8_hw.md)
+- [3.2 homework submisson](3.2_hw.md)
+
 
  
 
