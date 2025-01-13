@@ -4,10 +4,17 @@ title: Student Home
 description: Home Page
 hide: true
 ---
-[sprint 2](sprint2.md)
+
 
 <!-- title page saying welcome to jackosns page -->
 <center>
+
+
+<a href="./mcblog.html" style="text-decoration:none;">
+  <button style="background-color:#4CAF50;border:none;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:4px;">
+    Multiple Choice Blog and Review
+  </button>
+</a>
 
 
 <html lang="en">
@@ -31,6 +38,7 @@ hide: true
 </body>
 </html>
 
+[sprint 2](sprint2.md)
 
 
 </center>
