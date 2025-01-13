@@ -1,115 +1,66 @@
 ---
 layout: base
-title: Student Home 
+title: Student Home
 description: Home Page
 hide: true
 ---
 
+<!-- Main container -->
+<div style="font-family: Arial, sans-serif; background: linear-gradient(to bottom, #f7f7f7, #eaeaea); padding: 20px; min-height: 100vh;">
+  
+  <!-- Header -->
+  <div style="text-align: center; margin-bottom: 40px;">
+    <h1 style="font-family: 'Pacifico', cursive; font-size: 3em; color: #2c3e50;">Welcome to Jackson's Page</h1>
+    <p style="font-size: 1.2em; color: #34495e;">Explore resources, games, and more!</p>
+  </div>
 
-<!-- title page saying welcome to jackosns page -->
-<center>
+  <!-- Categories Section -->
+  <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; gap: 20px; margin-bottom: 40px;">
+    
+  <!-- Educational Section -->
+  <div style="flex: 1; min-width: 300px; background: #ecf0f1; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <h2 style="text-align: center; color: #2c3e50;">Educational Resources</h2>
+      <ul style="list-style: none; padding: 0; text-align: center;">
+        <li><a href="./mcblog.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Multiple Choice Blog and Review</a></li>
+        <li><a href="sprint2.md" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Sprint 2</a></li>
+        <li><a href="notebook1" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 1</a></li>
+        <li><a href="notebook2" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 2</a></li>
+        <li><a href="notebook3" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 3</a></li>
+        <li><a href="ECblog" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 4</a></li>
+       
+      </ul>
+    </div>
 
+  <!-- Gaming Section -->
+  <div style="flex: 1; min-width: 300px; background: #ecf0f1; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <h2 style="text-align: center; color: #2c3e50;">Gaming Zone</h2>
+      <div style="text-align: center;">
+        <button onclick="window.location.href='navigation/cookieclicker.html'" style="background-color: #3498db; color: white; padding: 10px 20px; margin: 5px; border-radius: 5px; border: none; font-size: 1em; cursor: pointer;">Cookie Clicker</button>
+        <button onclick="window.location.href='navigation/Binarycalculator.html'" style="background-color: #e74c3c; color: white; padding: 10px 20px; margin: 5px; border-radius: 5px; border: none; font-size: 1em; cursor: pointer;">Binary Calculator</button>
+        <button onclick="window.location.href='navigation/snakegame.html'" style="background-color: #1abc9c; color: white; padding: 10px 20px; margin: 5px; border-radius: 5px; border: none; font-size: 1em; cursor: pointer;">Snake Game</button>
+      </div>
+    </div>
+  </div>
 
-<a href="./mcblog.html" style="text-decoration:none;">
-  <button style="background-color:#4CAF50;border:none;color:white;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;border-radius:4px;">
-    Multiple Choice Blog and Review
-  </button>
-</a>
+  <!-- Mario Animation -->
+  <div>
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dee38e10-db68-462d-9df7-46b87d4c7876/de21qfq-4e1bfdda-0157-4558-9583-0b0c3ea6fb05.gif" alt="Mario walking" style="position: fixed; bottom: 0; left: 0; width: 120px; height: 120px; animation: walk 10s linear infinite;">
+  </div>
 
+  <!-- Additional Features Section -->
+  <div style="text-align: center; margin-bottom: 40px;">
+    <p style="font-size: 1.2em; color: #34495e;">Additional Features</p>
+    <table style="margin: 0 auto; border-collapse: collapse; font-size: 1.1em; text-align: center;">
+      <tr>
+        <td style="padding: 10px;"><a href="{{site.baseurl}}/pythonnotebook/" style="color: #2980b9;">Challenges</a></td>
+        <td style="padding: 10px;"><a href="{{site.baseurl}}/javascript/" style="color: #2980b9;">Python</a></td>
+        <td style="padding: 10px;"><a href="{{site.baseurl}}/thingy/" style="color: #2980b9;">JS</a></td>
+      </tr>
+    </table>
+  </div>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson's Page</title>
-    <style>
-        .title {
-            font-family: 'Pacifico', cursive;
-            color: #ff6347;
-            font-size: 3em;
-            text-align: center;
-            margin-top: 20%;
-        }
-    </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
-</head>
-<body>
-    <div class="title">Welcome to Jackson's Page</div>
-</body>
-</html>
-
-[sprint 2](sprint2.md)
-
-
-</center>
-
-<a href="notebook1" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Notebook 1</a>
-
-<a href="notebook2" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Notebook 2</a>
-
-<a href="notebook3" style="display: inline-block; padding: 10px 60px; background-color: #D3D3D3; color: black; text-decoration: underline; border-radius: 5px;">Notebook 3</a>
-
-<!-- button -->
-
-<div class="wrapper-outline">
-    <div class="container">
-    <p>This is a paragraph</p>
-    <button onclick="alert('This is a button!')">button</button>
-</div>
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-<div class="container">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">a</a>
-</div>
-
-<div class="container">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">a</a>
-</div>
-
-
-    <p>This is a paragraph</p>
-
-</div>
-
-
-
-<!-- mario runing code -->
-
-[![Mario walking](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dee38e10-db68-462d-9df7-46b87d4c7876/de21qfq-4e1bfdda-0157-4558-9583-0b0c3ea6fb05.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RlZTM4ZTEwLWRiNjgtNDYyZC05ZGY3LTQ2Yjg3ZDRjNzg3NlwvZGUyMXFmcS00ZTFiZmRkYS0wMTU3LTQ1NTgtOTU4My0wYjBjM2VhNmZiMDUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.sh5HInXXUaNmt4SGmPjMqC7SsW62by06NwL-WCtjjR8)]
-<style>
-  img {
-    position: fixed;
-    bottom: 0;              
-    left: 0;
-    width: 120px;
-    height: 120px;
-    animation: walk 10s linear infinite;
-  }
-  @keyframes walk {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(100vw); }
-  }
-</style>
-
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Add any other head elements here -->
-</head>
-<body>
-    <!-- Your existing content goes here -->
-
-    <!-- Utterances comments script -->
+  <!-- Utterances Comments Section -->
+  <div>
     <script src="https://utteranc.es/client.js"
             repo="Mom5MoreMins/aranya_student_2025"
             issue-term="pathname"
@@ -117,72 +68,22 @@ hide: true
             crossorigin="anonymous"
             async>
     </script>
-</body>
-</html>
-
-
-
-
-<div>
-<table>
-    <tr>
-        <td><a href="{{site.baseurl}}/pythonnotebook/">Challenges</a></td>
-        <td><a href="{{site.baseurl}}/javascript/">Python </a></td>
-        <td><a href="{{site.baseurl}}/thingy/">JS</a></td>
- </tr>
-</table>
-</div>
-
-
-## Gaming Submenu
-<style>
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #F9F9F9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    min-width: 160px;
-    z-index: 1;
-  }
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-radius: 5px;
-    margin: 5px;
-  }
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown:hover .dropdown-button {
-    background-color: #3E8E41;
-  }
-</style>
-<div class="dropdown">
-  <button class="dropdown-button" style="background-color: #4CAF50; color: white; padding: 16px; font-size: 16px; border: none; cursor: pointer; border-radius: 8px;">
-    Gaming Submenu
-  </button>
-  <div class="dropdown-content">
-    <a href="navigation/cookieclicker.html" style="background-color: Blue; color: white;">Cookie Clicker</a>
-    <a href="navigation/Binarycalculator.html" style="background-color: Red; color: white;">Binary Calculator</a>
-    <a href="navigation/snakegame.html" style="background-color: Teal; color: white;">Snake Game</a>
   </div>
+
+  <!-- Custom CSS -->
+  <style>
+    @keyframes walk {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(100vw); }
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+
+    table td a {
+      text-decoration: none;
+    }
+  </style>
 </div>
-
-
-
-
-
-
-
-
-
-
