@@ -22,12 +22,12 @@ hide: true
       <h2 style="text-align: center; color: #2c3e50;">Educational Resources</h2>
       <ul style="list-style: none; padding: 0; text-align: center;">
         <li><a href="./mcblog.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Multiple Choice Blog and Review</a></li>
-        <li><a href="sprint2.md" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Sprint 2</a></li>
-        <li><a href="notebook1" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 1</a></li>
-        <li><a href="notebook2" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 2</a></li>
-        <li><a href="notebook3" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 3</a></li>
-        <li><a href="ECblog" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 4</a></li>
-       
+        <li><a href="sprint2.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Sprint 2</a></li>
+        <li><a href="notebook1.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 1</a></li>
+        <li><a href="notebook2.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 2</a></li>
+        <li><a href="notebook3.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 3</a></li>
+        <li><a href="ECblog.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">Notebook 4</a></li>
+        <li><a href="CSblog.html" style="text-decoration: none; font-size: 1.1em; color: #2980b9;">CS Blog</a></li>
       </ul>
     </div>
 
