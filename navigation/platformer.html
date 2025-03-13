@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Platformer</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        canvas {
+            border: 2px solid #fff;
+        }
+        #hud {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 20px;
+        }
+        #gameOver {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hud">
+        Health: <span id="health">100</span> | 
+        Score: <span id="score">0</span> | 
+        Level: <span id="level">1</span>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="gameOver">
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+
+<script>
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = 800;
+canvas.height = 600;
+
+// Game state
+let gameState = {
+    score: 0,
+    health: 100,
+    level: 1,
+    gravity: 0.5,
+    isGameOver: false
+};
+
+// Player object
+const player = {
+    x: 50,
+    y: canvas.height - 100,
+    width: 40,
+    height: 40,
+    speed: 5,
+    jumpForce: -12,
+    velocityX: 0,
+    velocityY: 0,
+    isJumping: false,
+    canDoubleJump: true,
+    direction: 'right',
+    isAttacking: false,
+    powerups: [],
+    color: '#4CAF50'
+};
+
+// Arrays for game objects
+let platforms = [];
+let enemies = [];
+let collectibles = [];
+let powerups = [];
+let projectiles = [];
+let particles = [];
+
+// Level designs
+const levels = [
+    {
+        platforms: [
+            {x: 0, y: canvas.height - 40, width: canvas.width, height: 40, type: 'ground'},
+            {x: 300, y: 400, width: 200, height: 20, type: 'normal'},
+            {x: 100, y: 300, width: 200, height: 20, type: 'normal'},
+            {x: 500, y: 200, width: 200, height: 20, type: 'normal'}
+        ],
+        enemies: [
+            {x: 400, y: 360, width: 30, height: 30, type: 'patrol', range: 100},
+            {x: 600, y: 160, width: 30, height: 30, type: 'shooter'}
+        ],
+        collectibles: [
+            {x: 350, y: 350, type: 'coin'},
+            {x: 550, y: 150, type: 'coin'},
+            {x: 150, y: 250, type: 'coin'}
+        ],
+        powerups: [
+            {x: 700, y: 150, type: 'doubleJump'},
+            {x: 200, y: 250, type: 'shield'}
+        ]
+    }
+    // Add more levels here
+];
+
+// Input handling
+const keys = {
+    left: false,
+    right: false,
+    up: false,
+    space: false
+};
+
+document.addEventListener('keydown', (e) => {
+    switch(e.code) {
+        case 'ArrowLeft':
+        case 'KeyA':
+            keys.left = true;
+            break;
+        case 'ArrowRight':
+        case 'KeyD':
+            keys.right = true;
+            break;
+        case 'ArrowUp':
+        case 'KeyW':
+        case 'Space':
+            keys.up = true;
+            if (!player.isJumping && !keys.space) {
+                player.velocityY = player.jumpForce;
+                player.isJumping = true;
+            } else if (player.canDoubleJump && player.isJumping) {
+                player.velocityY = player.jumpForce * 0.8;
+                player.canDoubleJump = false;
+            }
+            break;
+        case 'KeyF':
+            attack();
+            break;
+    }
+});
+
+document.addEventListener('keyup', (e) => {
+    switch(e.code) {
+        case 'ArrowLeft':
+        case 'KeyA':
+            keys.left = false;
+            break;
+        case 'ArrowRight':
+        case 'KeyD':
+            keys.right = false;
+            break;
+        case 'ArrowUp':
+        case 'KeyW':
+        case 'Space':
+            keys.up = false;
+            break;
+    }
+});
+
+function attack() {
+    if (!player.isAttacking) {
+        player.isAttacking = true;
+        const projectile = {
+            x: player.x + (player.direction === 'right' ? player.width : 0),
+            y: player.y + player.height/2,
+            width: 10,
+            height: 10,
+            speed: player.direction === 'right' ? 10 : -10,
+            color: '#ff0000'
+        };
+        projectiles.push(projectile);
+        setTimeout(() => player.isAttacking = false, 500);
+    }
+}
+
+function updatePlayer() {
+    // Horizontal movement
+    if (keys.left) {
+        player.velocityX = -player.speed;
+        player.direction = 'left';
+    } else if (keys.right) {
+        player.velocityX = player.speed;
+        player.direction = 'right';
+    } else {
+        player.velocityX = 0;
+    }
+
+    // Apply gravity
+    player.velocityY += gameState.gravity;
+
+    // Update position
+    player.x += player.velocityX;
+    player.y += player.velocityY;
+
+    // Platform collision
+    let onPlatform = false;
+    platforms.forEach(platform => {
+        if (checkCollision(player, platform)) {
+            // Top collision
+            if (player.velocityY > 0 && 
+                player.y + player.height - player.velocityY <= platform.y) {
+                player.y = platform.y - player.height;
+                player.velocityY = 0;
+                player.isJumping = false;
+                player.canDoubleJump = true;
+                onPlatform = true;
+            }
+            // Bottom collision
+            else if (player.velocityY < 0 && 
+                     player.y >= platform.y + platform.height) {
+                player.y = platform.y + platform.height;
+                player.velocityY = 0;
+            }
+            // Side collisions
+            else {
+                if (player.velocityX > 0) {
+                    player.x = platform.x - player.width;
+                } else if (player.velocityX < 0) {
+                    player.x = platform.x + platform.width;
+                }
+            }
+        }
+    });
+
+    // Screen boundaries
+    if (player.x < 0) player.x = 0;
+    if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+    if (player.y < 0) player.y = 0;
+    if (player.y + player.height > canvas.height) {
+        player.y = canvas.height - player.height;
+        player.isJumping = false;
+        player.canDoubleJump = true;
+        player.velocityY = 0;
+    }
+}
+
+function updateProjectiles() {
+    for (let i = projectiles.length - 1; i >= 0; i--) {
+        const projectile = projectiles[i];
+        projectile.x += projectile.speed;
+
+        // Remove if off screen
+        if (projectile.x < 0 || projectile.x > canvas.width) {
+            projectiles.splice(i, 1);
+            continue;
+        }
+
+        // Check enemy collisions
+        enemies.forEach((enemy, enemyIndex) => {
+            if (checkCollision(projectile, enemy)) {
+                enemies.splice(enemyIndex, 1);
+                projectiles.splice(i, 1);
+                gameState.score += 100;
+                createParticles(enemy.x + enemy.width/2, enemy.y + enemy.height/2);
+            }
+        });
+    }
+}
+
+function updateEnemies() {
+    enemies.forEach(enemy => {
+        if (enemy.type === 'patrol') {
+            // Simple patrol movement
+            enemy.x += enemy.direction ? 2 : -2;
+            enemy.patrolDistance = (enemy.patrolDistance || 0) + (enemy.direction ? 2 : -2);
+            
+            if (Math.abs(enemy.patrolDistance) > enemy.range) {
+                enemy.direction = !enemy.direction;
+            }
+        } else if (enemy.type === 'shooter' && Math.random() < 0.02) {
+            // Shooter enemy occasionally fires at player
+            const projectile = {
+                x: enemy.x,
+                y: enemy.y + enemy.height/2,
+                width: 10,
+                height: 10,
+                speed: enemy.x > player.x ? -5 : 5,
+                color: '#ff0000',
+                isEnemy: true
+            };
+            projectiles.push(projectile);
+        }
+
+        // Check collision with player
+        if (checkCollision(player, enemy) && !player.isInvincible) {
+            gameState.health -= 10;
+            player.isInvincible = true;
+            setTimeout(() => player.isInvincible = false, 1000);
+            
+            if (gameState.health <= 0) {
+                gameOver();
+            }
+        }
+    });
+}
+
+function updateCollectibles() {
+    for (let i = collectibles.length - 1; i >= 0; i--) {
+        const collectible = collectibles[i];
+        if (checkCollision(player, collectible)) {
+            if (collectible.type === 'coin') {
+                gameState.score += 10;
+            }
+            collectibles.splice(i, 1);
+            createParticles(collectible.x, collectible.y);
+        }
+    }
+}
+
+function updatePowerups() {
+    for (let i = powerups.length - 1; i >= 0; i--) {
+        const powerup = powerups[i];
+        if (checkCollision(player, powerup)) {
+            if (powerup.type === 'doubleJump') {
+                player.canDoubleJump = true;
+            } else if (powerup.type === 'shield') {
+                player.isInvincible = true;
+                setTimeout(() => player.isInvincible = false, 5000);
+            }
+            powerups.splice(i, 1);
+            createParticles(powerup.x, powerup.y);
+        }
+    }
+}
+
+function updateParticles() {
+    for (let i = particles.length - 1; i >= 0; i--) {
+        const particle = particles[i];
+        particle.x += particle.velocityX;
+        particle.y += particle.velocityY;
+        particle.life--;
+        
+        if (particle.life <= 0) {
+            particles.splice(i, 1);
+        }
+    }
+}
+
+function createParticles(x, y) {
+    for (let i = 0; i < 10; i++) {
+        particles.push({
+            x: x,
+            y: y,
+            velocityX: (Math.random() - 0.5) * 5,
+            velocityY: (Math.random() - 0.5) * 5,
+            size: Math.random() * 4 + 2,
+            color: `hsl(${Math.random() * 360}, 50%, 50%)`,
+            life: 30
+        });
+    }
+}
+
+function checkCollision(rect1, rect2) {
+    return rect1.x < rect2.x + rect2.width &&
+           rect1.x + rect1.width > rect2.x &&
+           rect1.y < rect2.y + rect2.height &&
+           rect1.y + rect1.height > rect2.y;
+}
+
+function draw() {
+    // Clear canvas
+    ctx.fillStyle = '#333';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw platforms
+    platforms.forEach(platform => {
+        ctx.fillStyle = platform.type === 'ground' ? '#666' : '#888';
+        ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+    });
+
+    // Draw player
+    ctx.fillStyle = player.isInvincible ? '#ff0' : player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw enemies
+    enemies.forEach(enemy => {
+        ctx.fillStyle = enemy.type === 'shooter' ? '#f00' : '#a00';
+        ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height);
+    });
+
+    // Draw projectiles
+    projectiles.forEach(projectile => {
+        ctx.fillStyle = projectile.color;
+        ctx.fillRect(projectile.x, projectile.y, projectile.width, projectile.height);
+    });
+
+    // Draw collectibles
+    collectibles.forEach(collectible => {
+        ctx.fillStyle = '#ff0';
+        ctx.beginPath();
+        ctx.arc(collectible.x + 10, collectible.y + 10, 10, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    // Draw powerups
+    powerups.forEach(powerup => {
+        ctx.fillStyle = powerup.type === 'doubleJump' ? '#0ff' : '#f0f';
+        ctx.beginPath();
+        ctx.arc(powerup.x + 15, powerup.y + 15, 15, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    // Draw particles
+    particles.forEach(particle => {
+        ctx.fillStyle = particle.color;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
+    // Update HUD
+    document.getElementById('health').textContent = gameState.health;
+    document.getElementById('score').textContent = gameState.score;
+    document.getElementById('level').textContent = gameState.level;
+}
+
+function loadLevel(levelIndex) {
+    const level = levels[levelIndex - 1];
+    platforms = [...level.platforms];
+    enemies = [...level.enemies];
+    collectibles = [...level.collectibles];
+    powerups = [...level.powerups];
+    player.x = 50;
+    player.y = canvas.height - 100;
+}
+
+function gameOver() {
+    gameState.isGameOver = true;
+    document.getElementById('gameOver').style.display = 'block';
+    document.getElementById('finalScore').textContent = gameState.score;
+}
+
+function restartGame() {
+    gameState = {
+        score: 0,
+        health: 100,
+        level: 1,
+        gravity: 0.5,
+        isGameOver: false
+    };
+    document.getElementById('gameOver').style.display = 'none';
+    loadLevel(1);
+}
+
+function gameLoop() {
+    if (!gameState.isGameOver) {
+        updatePlayer();
+        updateProjectiles();
+        updateEnemies();
+        updateCollectibles();
+        updatePowerups();
+        updateParticles();
+        draw();
+        requestAnimationFrame(gameLoop);
+    }
+}
+
+// Initialize game
+loadLevel(1);
+gameLoop();
+</script>
+</body>
+</html> 

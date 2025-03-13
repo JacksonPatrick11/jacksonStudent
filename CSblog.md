@@ -38,7 +38,7 @@ My primary role in this project was designing and implementing the **quiz system
 ---
 
 # Cantella Front Page
-![Front Page](images/Screenshot 2025-01-30 at 10.13.21 PM.png)
+![Front Page](images/Screenshot 2025-03-03 at 10.37.34 AM.png)
 
 # Quiz Example
 ![quiz picture](images/Screenshot 2025-01-30 at 10.27.54 PM.png)
