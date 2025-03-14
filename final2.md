@@ -3,8 +3,12 @@ layout: base
 title: final2.md
 description: final2.md
 hide: true
+comments: True
 ---
 [PPR](ppr.md)
+[![Open CS Blog](https://img.shields.io/badge/Open-CS%20Blog-blue?style=for-the-badge)](http://127.0.0.1:4100/jacksonStudent/CSblog.html)
+
+<a href="#target-section" style="display:inline-block;padding:10px 20px;background:#007bff;color:white;text-decoration:none;border-radius:5px;">MC review</a>
 
 
 # Five Key Contributions to Cantella – Trimester 2
@@ -72,7 +76,6 @@ This collaborative effort **improved overall code quality** and made Cantella mo
 
 ---
 
-[![Open CS Blog](https://img.shields.io/badge/Open-CS%20Blog-blue?style=for-the-badge)](http://127.0.0.1:4100/jacksonStudent/CSblog.html)
 
 ### Night at the Museum Proof  
 
@@ -157,6 +160,8 @@ As I continue my journey in **computer science**, I plan to focus on:
 - **📊 Feature Requests:** A **dashboard for tracking progress** and **more peer interaction tools** were requested.  
 
 ---
+<span id="target-section"></span>
+
 
 # 📊 Multiple Choice Performance Breakdown  
 
