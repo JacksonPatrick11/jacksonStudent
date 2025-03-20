@@ -6,7 +6,7 @@ hide: true
 ---
 
 <!-- Main container -->
-<div style="font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(to bottom, #ffffff, #f0f0f0); padding: 20px; min-height: 100vh;">
+<div style="font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(to bottom, #ffffff,rgb(123, 118, 118)); padding: 20px; min-height: 100vh;">
   
   <!-- Header -->
   <div style="text-align: center; margin-bottom: 40px;">
@@ -39,8 +39,11 @@ hide: true
       </ul>
     </div>
 
-    <!-- Other sections remain unchanged -->
+  </div>
 
+  <!-- TRI3 Lesson Homework Button -->
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="teamlesson.html" style="display: inline-block; background-color: #1a237e; color: white; font-size: 1.2em; padding: 12px 24px; border-radius: 8px; text-decoration: none; transition: background-color 0.3s;">📂 TRI3 Lesson Homework</a>
   </div>
 
   <!-- Mario Animation -->

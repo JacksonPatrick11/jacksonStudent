@@ -22,3 +22,8 @@ Ask a yes-or-no question and click the button to get an answer!
         document.getElementById("answer").innerText = randomAnswer;
     });
 </script>
+
+
+
+
+
