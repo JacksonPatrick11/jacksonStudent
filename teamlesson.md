@@ -23,6 +23,8 @@ Technology fuels instant gratification through social media, gaming, and notific
 ✅ *Why It Matters:*  
 Understanding these unintended effects helps us set boundaries, practice digital mindfulness, and maintain a healthier relationship with technology.
 
+
+
 # **Homework Hacks – AI Innovations, Ethics, and Consequences** 
 
 
@@ -69,3 +71,51 @@ Ethical AI development is important because biased technology can cause real-wor
   - Implementing stricter AI ethics reviews and transparency reports can help identify and mitigate risks.  
 
 ---
+
+
+
+## Digital Divide 
+
+
+# **Popcorn Hack** 🍿
+
+## **Example Problem in MCQ**
+**Question:** Which of the following actions are likely to be helpful in reducing the digital divide? Select two answers.
+
+### **Options:**
+- A) Designing new technologies intended only for advanced users ❌
+- B) Designing new technologies to be accessible to individuals with different physical abilities ✅
+- C) Implementing government regulations restricting citizens’ access to Web content ❌
+- D) Having world governments support the construction of network infrastructure ✅
+
+### **Solution Explanation:**
+✅ **B) Designing accessible technologies** ensures that individuals with different physical abilities can effectively use digital tools, helping to close the digital divide.
+✅ **D) Supporting network infrastructure construction** provides better internet access in underserved areas, reducing disparities.
+
+---
+
+## **Popcorn Hack: Digital Divide Discussion**
+### **How would you attempt to fix the digital divide or prevent it from being as prevalent in our community?**
+
+1️⃣ **Expanding Public Wi-Fi Access:** Cities should continue programs like Access 4 All, offering free internet in public spaces such as parks and bus stops.
+2️⃣ **Improving Affordable Broadband Initiatives:** More government incentives and policies should make home broadband connections more affordable for low-income families.
+3️⃣ **Digital Literacy Education:** Schools and libraries should offer free computer literacy programs to ensure individuals know how to navigate the digital world effectively.
+4️⃣ **Technology Donations & Refurbishing Programs:** Volunteering at organizations like HandsOn San Diego can help refurbish and distribute computers to underserved communities.
+5️⃣ **Encouraging Private Sector Involvement:** Tech companies should invest in community-based internet access solutions, ensuring equitable technological growth.
+
+---
+
+# **Homework Hack** 🎓
+
+---
+
+(image)[images/Screenshot 2025-03-24 084313.png]
+
+(image)[images/Screenshot 2025-03-24 084322.png]
+
+
+
+
+### Computer Bias. 
+
+popcorn hack: an example of bias could be tik tok and its adds. 
