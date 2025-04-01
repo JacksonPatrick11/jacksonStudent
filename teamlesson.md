@@ -155,3 +155,80 @@ YouTube could implement:
 - **Improved transparency:** Provide users with **explanations** on why a video is recommended and offer **more manual control** over feed customization.  
 
 By implementing these changes, YouTube can **reduce bias** and create a more **inclusive** content ecosystem. 🚀  
+
+
+
+
+
+
+
+
+
+## Legal and Ethical concerns
+
+
+## 🍿 Popcorn Hack: Protecting Intellectual Property  
+
+Intellectual property (IP) needs protection to prevent theft and misuse. Here’s how:  
+
+- **Copyright & Patents** – Secure legal rights for creative works and inventions.  
+- **Trademarks & Branding** – Protect logos, names, and brand identity.  
+- **Regulation Boards** – Oversee and enforce IP laws.  
+- **Licensing Agreements** – Define how others can use your work legally.  
+- **Digital Rights Management (DRM)** – Use tech to prevent unauthorized copying.  
+- **Legal Action** – Monitor, enforce, and take action against IP violations.  
+
+## Popcorn Hack MIT license
+
+An MIT License is a permissive open-source license that allows anyone to use, modify, and distribute your code with minimal restrictions, as long as they include the original copyright and license notice. You can use it to share projects openly while still getting credit, making it ideal for personal, educational, or collaborative software development.
+
+## Third popcorn hack. 
+
+A Creative Commons (CC) License allows creators to share their work with specific permissions, such as allowing reuse, modification, or non-commercial use while still retaining some rights. Exceptions to copyright law include fair use (for education, criticism, or news), public domain works, and government documents in some cases.
+
+
+
+
+## Final popcorn hack
+
+Use Creative Commons or Public Domain Works – Only use content that is explicitly free to share or modify.
+
+Get Permission or Licenses – Obtain written consent from the original creator before using copyrighted material.
+
+Give Proper Attribution – Always credit the creator if required by the license.
+
+Follow Fair Use Guidelines – Use copyrighted content only in legally permitted ways (e.g., for education, criticism, or parody).
+
+Create Your Own Content – The safest way to avoid infringement is to make original work instead of using others'.
+
+Discused with vincent 
+
+
+[link to license](https://github.com/JacksonPatrick11/jacksonStudent/blob/10483b540abd5007681f6bb1aaa291b4cf7ce604/LICENSE)
+
+
+
+
+
+
+
+
+
+
+## Data Collection Lesson. 
+The answer to popcoron hack is fingerprinmt
+
+The second popcorn hack answer is verification code. 
+
+
+Popcorn quiz; the asnwer is B, finn and quin. 
+
+My password takes 2 million years to crack. What makes a seure password is length and fun chacarters. 
+
+
+
+
+
+
+
+
