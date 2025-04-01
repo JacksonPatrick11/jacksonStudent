@@ -204,12 +204,12 @@ Create Your Own Content – The safest way to avoid infringement is to make orig
 Discused with vincent 
 
 
-[link to license](https://github.com/JacksonPatrick11/jacksonStudent/blob/10483b540abd5007681f6bb1aaa291b4cf7ce604/LICENSE)
+[link to license](https://github.com/JacksonPatrick11/jacksonStudent/blob/main/LICENSE)
 
 
 
 
-
+s
 
 
 
