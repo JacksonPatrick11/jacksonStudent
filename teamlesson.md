@@ -209,7 +209,7 @@ Discused with vincent
 
 
 
-s
+
 
 
 
@@ -227,6 +227,116 @@ My password takes 2 million years to crack. What makes a seure password is lengt
 
 
 
+
+
+
+
+
+# Binary Search Algothrims 
+multiple choice popcorn hack: optcio C becaause the bunary search can not check a non-sorted list by comparing values. 
+
+popcorn hack 2: option B because its true and the rest is wrong.  
+
+
+'''python
+
+    def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
+    
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid  # Found the target
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+            
+    return -1  # Not found
+
+'''
+
+
+
+
+'''python
+
+
+    import pandas as pd
+    import math
+    # Load the dataset
+    data = pd.read_csv("school_supplies.csv")
+    # Drop rows with missing values
+    data_cleaned = data.dropna()
+    #  Sort the data by 'Price'
+    data_sorted = data_cleaned.sort_values(by="Price")
+    # Extract sorted prices as a list
+    price_list = data_sorted["Price"].tolist()
+    #  Preview the sorted data
+     print("First few rows of sorted data:")
+    print(data_sorted.head())
+    print("Original row count:", len(data))
+    print("Cleaned row count:", len(data_cleaned))
+    def binary_search(list, value):
+    start = 0
+    end = len(list)-1
+
+    def search(start, end):
+        index = math.floor((end+start)/2)
+        if list[index] == value:
+            return index
+        if list[index] > value:
+            return search(start, index-1)
+        if index == end and list[index] != value:
+            return -1
+        else:
+            return search(index+1, end)
+
+    return search(start, end)
+
+    prices_to_find = [1.25, 6.49, 10.00]
+
+    for price in prices_to_find:
+    price_index = binary_search(price_list, price)
+    if price_index == -1:
+        print("Price not found: $" + str(price))
+        else:
+        print("Price $" + str(price) + " found at index:", price_index)
+
+'''
+
+[proof](images/Screenshot 2025-04-08 at 9.12.13 AM.png)
+
+
+# lists and filtiering algorithms 
+
+
+# Create a list of four famous movies
+movies = ["The Godfather", "Titanic", "Inception", "The Dark Knight"]
+# Replace the second movie (index 1) with a new movie
+movies[1] = "Forrest Gump"
+# Add another movie to the end of the list
+movies.append("Pulp Fiction")
+# Display the updated list
+print(movies)
+
+
+
+
+# 🗳️ Original list of ages
+ages = [15, 29, 34, 16, 18, 21, 14, 19]
+
+# ✅ Filter: Only include ages 18 and older (voting age)
+voting_eligible = [age for age in ages if age >= 18]
+
+# 📋 Display the result
+print("Eligible for voting:")
+print(voting_eligible)
+
+
+Eligible for voting:
+[29, 34, 18, 21, 19]
 
 
 
