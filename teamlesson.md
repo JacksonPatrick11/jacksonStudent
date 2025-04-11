@@ -342,3 +342,142 @@ Eligible for voting:
 
 
 
+
+# random algorithm 
+
+A random algorithm (more commonly called a randomized algorithm) is an algorithm that uses random numbers or random choices as part of its logic. That randomness can affect how it solves a problem, how fast it runs, or what result it gives.
+
+
+
+# Popcorn Hack Number 2 (Random): Make a random algorithm to choose a daily activity:
+import random
+
+# Step 1: Define a list of activities (customized!)
+activities = [
+    'Paint something with watercolors 🎨',
+    'Do a 10-minute stretch session 🧘',
+    'Try learning a new TikTok dance 💃',
+    'Organize your desk or study space 🧼',
+    'Make a smoothie or snack 🍓',
+    'Write a letter to your future self 💌',
+    'Watch a feel-good movie 🍿',
+    'Learn a new fun fact 🧠',
+    'Take a 20-minute power nap 💤',
+    'Go outside and touch grass 🌿',
+    'Get a head start on your homework 📚'
+]
+
+# Step 2: Randomly choose an activity
+random_activity = random.choice(activities)
+
+# Step 3: Display the chosen activity
+print(f"Today’s random activity: {random_activity}")
+
+
+# Popcorn Hack Number 3: Using loops in random to assign party roles
+import random
+
+# Hosts for the party
+hosts = ['Xavier', 'Jules', 'Kayla', 'Rami', 'Nova']
+
+# Fun party activity stations
+activities = ['drink station 🍹', 'dance battle zone 🕺', 'photo backdrop area 📸', 'snack bar 🍕', 'game station 🎲']
+
+# Randomly shuffle the activity list
+random.shuffle(activities)
+
+# Assign each host to an activity
+for i in range(len(hosts)):
+    print(f"{hosts[i]} will be monitoring the {activities[i]}!")
+
+
+
+# Popcorn Hack Number 3: Using loops in random to assign activities
+import random
+
+# Updated list of hosts
+hosts = ['Vincent', 'Wyat', 'Jackson', 'Trevor', 'Aranya']
+
+# Same list of party activities
+activities = ['dancing', 'games', 'snack center', 'photo booth', 'karaoke']
+
+# Randomly shuffle the activities to assign them randomly
+random.shuffle(activities)
+
+# Assign each host to an activity
+for i in range(len(hosts)):
+    print(f"{hosts[i]} will be monitoring {activities[i]}!")
+
+
+
+    <pre>
+```python
+# Number Spinner: Spins a random number between a chosen range
+import random
+import time
+
+print("🎰 Spinning the number spinner...")
+
+# Simulate the spinning effect
+for i in range(10):
+    spin = random.randint(1, 100)
+    print(f"Spinning... {spin}", end="\r")
+    time.sleep(0.1)
+
+# Final result
+result = random.randint(1, 100)
+print(f"🎉 The final number is: {result}")
+```
+</pre>
+
+
+<pre>
+```python
+# 📚 Homework Hacks: Random Algorithms + Simulations
+import random
+
+# --- Hack 1: Random Team Assignment ---
+print("🎯 Hack 1: Random Team Assignment\n")
+
+students = [
+    'Soumini', 'Ethan', 'Risha', 'Abby', 'Vincent', 'Wyat', 'Jackson',
+    'Trevor', 'Aranya', 'Nina', 'Zane', 'Jules', 'Ava', 'Maya', 'Leo'
+]
+
+teams = ['Team Phoenix 🔥', 'Team Neptune 🌊', 'Team Thunder ⚡']
+assignments = {}
+
+for student in students:
+    team = random.choice(teams)
+    assignments[student] = team
+
+for student, team in assignments.items():
+    print(f"{student} → {team}")
+
+print("\n" + "-"*40 + "\n")
+
+# --- Hack 2: Random Weather Forecast ---
+print("🌤️ Hack 2: 7-Day Weather Forecast\n")
+
+weather_options = ['Sunny ☀️', 'Cloudy ☁️', 'Rainy 🌧️']
+
+for day in range(1, 8):
+    weather = random.choice(weather_options)
+    print(f"Day {day}: {weather}")
+
+print("\n" + "-"*40 + "\n")
+
+# --- Simulations Hack: Coffee Shop Queue ---
+print("☕ Hack 3: Coffee Shop Queue Simulation\n")
+
+customer_service_times = [random.randint(1, 5) for _ in range(5)]
+total_time = 0
+
+for i, time_needed in enumerate(customer_service_times):
+    customer = f"Customer {i+1}"
+    total_time += time_needed
+    print(f"{customer} is served in {time_needed} minute(s)")
+
+print(f"\n⏱️ Total time to serve all customers: {total_time} minutes")
+```
+</pre>
