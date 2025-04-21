@@ -481,3 +481,102 @@ for i, time_needed in enumerate(customer_service_times):
 print(f"\n⏱️ Total time to serve all customers: {total_time} minutes")
 ```
 </pre>
+
+
+# Big O and Algorithm Efficiency
+
+## 🧠 Notes
+
+**Big O Notation** measures how efficient an algorithm is as input size increases. It focuses on:
+
+- **Time Complexity**: How long it takes.
+- **Space Complexity**: How much memory it uses.
+
+### 🔢 Common Complexities
+
+| Big O     | Name           | Description                                |
+|-----------|----------------|--------------------------------------------|
+| O(1)      | Constant        | Doesn't grow with input size.              |
+| O(log n)  | Logarithmic     | Grows slowly as input increases.           |
+| O(n)      | Linear          | Grows directly with input size.            |
+| O(n log n)| Linearithmic    | Faster than quadratic, used in good sorts. |
+| O(n²)     | Quadratic       | Nested loops—gets slow fast.               |
+| O(2ⁿ)     | Exponential     | Doubles each time—very slow.               |
+| O(n!)     | Factorial       | Terribly slow—only for very small inputs.  |
+
+---
+
+## 🧪 Examples
+
+### O(1) - Constant Time
+```python
+arr = [1, 2, 3, 4, 5]
+print(arr[2])  # Access by index is constant time
+```
+
+---
+
+## 🍿 Popcorn Hack #1
+
+```python
+arr = [1, 2, 3, 4, 5]
+
+# O(1)
+print(arr[2])
+
+# O(n)
+for num in arr:
+    print(num)
+```
+
+---
+
+## 🍿 Popcorn Hack #2
+
+```python
+arr = [1, 2, 3]
+
+def print_unique_pairs(arr):
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            print(f"({arr[i]},{arr[j]})")
+
+print_unique_pairs(arr)
+```
+
+---
+
+## 🍿 Popcorn Hack #3
+
+**Q1: Which is inefficient for large inputs?**  
+✅ **b) Factorial Time**
+
+**Q2: Which can be represented by a nested loop?**  
+✅ **c) Quadratic Time**
+
+---
+
+## 🏠 Homework Hack
+
+```python
+def perform_operation(arr, complexity):
+    if complexity == "constant":
+        return arr[0]
+    elif complexity == "linear":
+        for item in arr:
+            print(item)
+    elif complexity == "quadratic":
+        for i in arr:
+            for j in arr:
+                print(f"({i},{j})")
+    else:
+        print("Unsupported complexity")
+```
+
+### Example Usage
+```python
+arr = [5, 10, 15, 20, 25]
+perform_operation(arr, "constant")
+perform_operation(arr, "linear")
+perform_operation(arr, "quadratic")
+```
