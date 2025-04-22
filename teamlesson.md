@@ -580,3 +580,93 @@ perform_operation(arr, "constant")
 perform_operation(arr, "linear")
 perform_operation(arr, "quadratic")
 ```
+
+
+### 🍿 Popcorn Hack Answers
+
+**Popcorn Hack 1**  
+❌ **False**  
+> An algorithm **cannot** solve an undecidable problem for all inputs. That’s what makes it undecidable.
+
+**Popcorn Hack 2**  
+✅ **True**  
+> While an undecidable problem can’t be solved in every case, programmers often use **heuristics** or algorithms that work for **some** cases.
+
+**Popcorn Hack 3**  
+✅ **D. Bubble sorting**  
+> Bubble sort is a **decidable** algorithm. It always finishes and correctly sorts input. The others involve undecidable problems.
+
+---
+
+
+
+
+
+
+
+
+### 🧠 Undecidable Problems Homework
+
+Modern operating systems and browsers have built-in mechanisms to detect and manage infinite loops or long-running scripts to keep the system responsive.
+
+#### 🖥️ Operating Systems:
+- **Watchdog Timers** monitor programs. If a process stops responding for too long, the OS may force it to close (e.g., “Not Responding” messages in Windows).
+- **Resource Management** systems monitor CPU/memory usage and can terminate processes that exceed limits.
+
+#### 🌐 Browsers:
+- Most modern browsers (like Chrome or Firefox) will show a warning such as:  
+  > “A script on this page may be busy, or it may have stopped responding.”
+- Browsers automatically stop or prompt users to stop long-running scripts.
+- Example: JavaScript infinite loops (e.g. `while(true) {}`) can freeze the page. The browser detects this and may kill the script or crash the tab.
+
+#### 🔍 Real-World Example:
+- **Google Chrome** has a built-in **tab freeze and crash recovery** system.
+- If a page consumes too many resources, Chrome will suspend the tab or show an error like:  
+  > “Aw, Snap! Something went wrong while displaying this webpage.”
+
+These safeguards don’t **solve** undecidability, but they help prevent system or browser crashes by detecting behavior that *could* result from an undecidable process.
+
+
+
+
+
+
+Graphs & Heuristics
+
+
+### 🍿 Popcorn Hack Answers
+
+**Popcorn Hack #1**  
+❌ **False**  
+> In a **directed graph**, an edge from node A to node B **does not** imply a corresponding edge from B to A. That would only be true in an **undirected graph**.
+
+**Popcorn Hack #2**  
+✅ **True**  
+> Heuristics often provide **faster** solutions than exact algorithms, but they may **sacrifice accuracy**. They’re approximations, not guaranteed optimal.
+
+**Popcorn Hack #3**  
+✅ **True**  
+> Heuristic algorithms like Nearest Neighbor are fast but **don’t guarantee optimality**. As cities increase, the gap between heuristic and optimal solutions can grow **exponentially**.
+
+---
+
+### 🧠 Graphs & Heuristics Homework
+
+**Social Network Analysis (SNA)** uses **graph theory** to understand relationships and interactions between people or entities on social media platforms.
+
+#### 🔗 Nodes & Edges in Social Networks:
+- **Nodes (Vertices):** Represent individual users or accounts.
+- **Edges (Connections):** Represent relationships or interactions between users.
+  - These can be **directed** (e.g., follows on Twitter) or **undirected** (e.g., Facebook friendships).
+  - They can also be **weighted** to show strength or frequency of interaction (e.g., number of messages sent).
+
+#### 📱 Real-World Example: Facebook
+- **Facebook** uses graphs to model friendships, recommend friends, detect communities, and track information flow.
+- Graph-based algorithms help Facebook suggest new friends by analyzing **mutual connections** and **network proximity**.
+
+Graphs enable platforms to:
+- Find **influential users** (central nodes).
+- Detect **clusters or communities** (people with lots of mutual connections).
+- Identify potential **spam bots or fake accounts** using pattern analysis.
+
+In short, graph theory helps social media platforms **organize, analyze, and optimize** the vast web of user interactions.
