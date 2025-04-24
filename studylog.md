@@ -71,7 +71,7 @@ permalink: /apcspstudy
       <li>Focus on Big Ideas 1–3: Creative Development, Algorithms, and Program Design</li>
       <li>Practice problems on conditionals, loops, and procedures</li>
       <li>Rewatch:
-        <a href="https://www.youtube.com/watch?v=YkA3xv1CllA" target="_blank">Abstraction & Functions – AP CSP</a>
+        <a href="https://www.youtube.com/watch?v=Id4vPEy8F9s&list=PLj_pyeExdy66JkPloB7cvp60gr_NreIC1" target="_blank"> AP CSP</a>
       </li>
       <li>Review data representation and compression</li>
     </ul>
@@ -81,7 +81,7 @@ permalink: /apcspstudy
       <li>Focus on Big Ideas 4–5: Networks, Cybersecurity, and Impacts of Computing</li>
       <li>Watch:
         <a href="https://www.youtube.com/watch?v=1JZ9_p6Z7cM" target="_blank">Internet & DNS Explained</a>,
-        <a href="https://www.youtube.com/watch?v=AuYNXgO_f3M" target="_blank">Cybersecurity & Threats</a>
+        <a href="https://www.youtube.com/watch?v=UVR9lhUGAyU" target="_blank">DNS explained</a>
       </li>
       <li>Review safe computing practices, ethics, and bias</li>
       <li>Fill gaps based on missed MC quiz questions</li>
