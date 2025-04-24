@@ -4,7 +4,7 @@ title: Student Home
 description: Home Page
 hide: true
 ---
-
+[study log](studylog.md)
 <!-- Main container -->
 <div style="font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(to bottom, #ffffff,rgb(123, 118, 118)); padding: 20px; min-height: 100vh;">
   
