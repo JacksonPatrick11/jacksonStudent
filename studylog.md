@@ -59,8 +59,8 @@ permalink: /apcspstudy
       <li>Revisit real-world examples of computing innovations and their impacts on society.</li>
       <li>Explore ethical and social implications of technology with current case studies.</li>
     </ul>
-   <img src="images/Screenshot 2025-04-24 at 12.07.53 AM.png" alt="Image of MC Quiz">
-<img src="images/Screenshot 2025-04-24 at 12.20.02 AM.png" alt="Image of review with markup and notes">
+    <img src="images/Screenshot 2025-04-24 at 12.07.53 AM.png" alt="Image of MC Quiz">
+    <img src="images/Screenshot 2025-04-24 at 12.20.02 AM.png" alt="Image of review with markup and notes">
   </div>
 
   <div class="section">
@@ -93,6 +93,31 @@ permalink: /apcspstudy
       <li>Review concepts with flashcards and mind maps</li>
       <li>Light practice and confidence boosting before the exam</li>
     </ul>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Studying for the Performance Task (PPR) & CPT Requirements</h2>
+    <p>To prep for the Create Performance Task (CPT) and its written response (PPR), here’s my plan:</p>
+    <ul>
+      <li>Review my code and ensure I understand every line I wrote (variables, loops, procedures, list usage, and output).</li>
+      <li>Practice writing 100-word responses for each written response prompt.</li>
+      <li>Go through the AP rubric and score samples from the College Board to understand expectations.</li>
+      <li>Have a friend ask me questions about my code and practice explaining my logic and development process out loud.</li>
+    </ul>
+
+    <h3>Example PPR Questions & Answers</h3>
+    <p><strong>2b. Data abstraction:Describe the overall purpose of your program.</strong></p>
+    <p><em>My project uses a list (array) of 50 quiz questions accessed via an API. I call this list and randomly select 10 questions to display for each quiz session. This abstraction simplifies my program by allowing me to reuse the same code structure for any set of 10 questions without hardcoding each one.</em></p>
+
+    <p><strong>2c. Procedure:Describe the development process. What difficulties did you face and how did you overcome them?</strong></p>
+    <p><em>One key procedure in my program is <code>getRandomQuestions()</code>. It takes the full question list and returns 10 unique items. This helps keep the quiz different every time and allows the user to engage with a fresh challenge. I created this function to ensure reusability and avoid repeating the same filtering logic.</em></p>
+
+    <p><strong>2d. Algorithm:Describe a code segment with a student-developed algorithm. What does it do and how does it work?
+</strong></p>
+    <p><em>My program uses a combination of loops and conditionals. After selecting the 10 questions, it loops through user responses, compares them to the correct answers using a conditional, and tallies the score. This determines the final result, which is displayed and added to the leaderboard.</em></p>
+
+    <p><strong>2e. Testing:How did you test your program? </strong></p>
+    <p><em>To test my program, I created sample quizzes and checked whether the correct number of questions were pulled. I also checked the leaderboard update feature to make sure scores displayed in the right order. Admin commands like "edit" and "delete" were tested using mock data to ensure changes reflected correctly.</em></p>
   </div>
 
   <div class="section">
