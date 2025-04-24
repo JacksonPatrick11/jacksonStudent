@@ -80,7 +80,7 @@ permalink: /apcspstudy
     <ul>
       <li>Focus on Big Ideas 4–5: Networks, Cybersecurity, and Impacts of Computing</li>
       <li>Watch:
-        <a href="https://www.youtube.com/watch?v=1JZ9_p6Z7cM" target="_blank">Internet & DNS Explained</a>,
+        <a href="https://www.youtube.com/watch?v=wb3taZ5bjzw&t=25s" target="_blank">AP CSP</a>,
         <a href="https://www.youtube.com/watch?v=UVR9lhUGAyU" target="_blank">DNS explained</a>
       </li>
       <li>Review safe computing practices, ethics, and bias</li>
