@@ -670,3 +670,170 @@ Graphs enable platforms to:
 - Identify potential **spam bots or fake accounts** using pattern analysis.
 
 In short, graph theory helps social media platforms **organize, analyze, and optimize** the vast web of user interactions.
+
+
+
+
+
+
+# Binary base 2 Homework and popcorn hacks
+
+POPCORN 1:
+def binary_to_decimal(binary_str):
+    decimal = 0
+    for i in range(len(binary_str)):
+        decimal += int(binary_str[-(i + 1)]) * (2 ** i)
+    return decimal
+#Get user input
+binary_input = input("Enter a binary number: ")
+decimal_output = binary_to_decimal(binary_input)
+print(f"The decimal representation of {binary_input} is {decimal_output}.")
+8:41
+POPCORN 2:
+import random
+import time
+def binary_addition_battle():
+    # Generate two random binary numbers (up to 8 bits)
+    num1 = bin(random.randint(0, 255))[2:]
+    num2 = bin(random.randint(0, 255))[2:]
+    # Show the binary numbers
+    print(f"Add the following binary numbers:")
+    print(f"Number 1: {num1}")
+    print(f"Number 2: {num2}")
+    # Start the timer
+    start_time = time.time()
+    # Ask the user for the sum
+    user_answer = input("Your answer (in binary): ")
+    # End the timer
+    end_time = time.time()
+    # Calculate the correct binary sum
+    correct_answer = bin(int(num1, 2) + int(num2, 2))[2:]
+    # Check if the answer is correct
+    if user_answer == correct_answer:
+        print(f"Correct! You took {end_time - start_time:.2f} seconds.")
+        print(f"Your score: +10 points!")
+    else:
+        print(f"Oops! The correct answer was {correct_answer}.")
+        print(f"Your score: -5 points.")
+# Run the game
+binary_addition_battle()
+8:43
+HW:
+import random
+import time
+def binary_addition(a, b):
+    return bin(int(a, 2) + int(b, 2))[2:]
+def binary_subtraction(a, b):
+    if int(a, 2) < int(b, 2):
+        return "Error"
+    return bin(int(a, 2) - int(b, 2))[2:]
+def decimal_to_binary(n):
+    return bin(n)[2:]
+def binary_to_decimal(b):
+    return int(b, 2)
+def binary_battle_royale():
+    print(":space_invader: Welcome to Binary Battle Royale! :space_invader:")
+    score = 0
+    total_rounds = 3
+    for round_num in range(1, total_rounds + 1):
+        print(f"\n:zap: Round {round_num} :zap:")
+        mode = random.choice(["addition", "subtraction", "dec_to_bin", "bin_to_dec"])
+        if mode == "addition":
+            num1 = bin(random.randint(0, 15))[2:]
+            num2 = bin(random.randint(0, 15))[2:]
+            print(f"Add these two binary numbers: {num1} + {num2}")
+            user_answer = input("Your answer (binary): ").strip()
+            correct_answer = binary_addition(num1, num2)
+            if user_answer == correct_answer:
+                print(":white_check_mark: Correct!")
+                score += 1
+            else:
+                print(f":x: Incorrect. The correct answer was {correct_answer}.")
+        elif mode == "subtraction":
+            num1_val = random.randint(8, 31)
+            num2_val = random.randint(0, num1_val)
+            num1 = bin(num1_val)[2:]
+            num2 = bin(num2_val)[2:]
+            print(f"Subtract these two binary numbers: {num1} - {num2}")
+            user_answer = input("Your answer (binary): ").strip()
+            correct_answer = binary_subtraction(num1, num2)
+            if user_answer == correct_answer:
+                print(":white_check_mark: Correct!")
+                score += 1
+            else:
+                print(f":x: Incorrect. The correct answer was {correct_answer}.")
+        elif mode == "dec_to_bin":
+            decimal_number = random.randint(0, 31)
+            print(f"Convert this decimal number to binary: {decimal_number}")
+            user_answer = input("Your answer (binary): ").strip()
+            correct_answer = decimal_to_binary(decimal_number)
+            if user_answer == correct_answer:
+                print(":white_check_mark: Correct!")
+                score += 1
+            else:
+                print(f":x: Incorrect. The correct answer was {correct_answer}.")
+        elif mode == "bin_to_dec":
+            binary_number = bin(random.randint(0, 31))[2:]
+            print(f"Convert this binary number to decimal: {binary_number}")
+            user_answer = input("Your answer (decimal): ").strip()
+            correct_answer = str(binary_to_decimal(binary_number))
+            if user_answer == correct_answer:
+                print(":white_check_mark: Correct!")
+                score += 1
+            else:
+                print(f":x: Incorrect. The correct answer was {correct_answer}.")
+    print("\n:trophy: Game Over! :trophy:")
+    print(f"Your final score: {score}/{total_rounds}")
+    if score == total_rounds:
+        print(":star2: Amazing job! You're a Binary Master!")
+    elif score >= total_rounds // 2:
+        print(":+1: Good effort! Keep practicing!")
+    else:
+        print(":bulb: Don't worry — review the rules and try again!")
+# --- Start the game ---
+binary_battle_royale()
+8:43
+- To convert a binary number to a decimal number, multiply each bit by 2 raised to the power of its position (starting from 0 on the right) and sum the results.
+- For the binary number 11111111, the decimal equivalent is 255.
+
+
+
+
+
+
+
+# Logic Gates
+# :books: Popcorn Hack 1: Real-World Uses of Logic Gates
+**Logic gates** are essential in electronics and computing, enabling complex decision-making. Real-world examples include:
+- **Security Systems**: Logic gates (especially AND gates) ensure that multiple conditions (like keycard + PIN + fingerprint) must all be met to unlock a door.
+  ➔ *Impact*: Increases security by making unauthorized access much harder.
+- **Medical Devices**: Devices like pacemakers use logic gates to control timing and ensure that electrical pulses happen only under the right heart conditions.
+  ➔ *Impact*: Helps save lives by providing accurate, automated heart regulation.
+- **Traffic Light Control**: Sensors and timers use logic gates to determine when lights should change based on cars present.
+  ➔ *Impact*: Reduces traffic jams and prevents accidents.
+- **Computers and Calculators**: All mathematical operations in a CPU are based on logic gates.
+  ➔ *Impact*: Makes rapid, reliable calculations possible, enabling all modern technology.
+---
+# :desktop_computer: Popcorn Hack 2: Logic Expression for Digital Circuit
+**Problem:**
+A circuit outputs 1 if and only if **(X AND Y) OR Z**.
+:white_check_mark: **Correct Answer:**
+**A. (X AND Y) OR Z**
+**Explanation:**
+- "X AND Y are both 1" → **X AND Y**
+- "OR Z is 1" → **OR Z**
+Thus, the circuit behavior matches **(X AND Y) OR Z**.
+---
+# :lock: Homework Hack: Authorization System with Three Factors
+**Task:** Add a third variable (like voice authorization) to the secure entry system.
+8:47
+def secure_entry_system(keycard, pin, voice_auth):
+    def AND(a, b):
+        return a & b  # AND logic
+    # Now use AND logic for three inputs
+    return AND(AND(keycard, pin), voice_auth)
+# Test cases
+print(secure_entry_system(1, 1, 1))  # Expected Output: 1 (Access Granted)
+print(secure_entry_system(1, 1, 0))  # Expected Output: 0 (Access Denied)
+print(secure_entry_system(0, 1, 1))  # Expected Output: 0 (Access Denied)
+print(secure_entry_system(1, 0, 1))  # Expected Output: 0 (Access Denied)
