@@ -164,4 +164,4 @@ Learning to code has given me a valuable foundation that I can apply to many dif
 
 Beyond technical skills, this class has strengthened my **critical thinking** and taught me how to thrive in a **creative, collaborative environment**. These lessons have been just as important as learning syntax or frameworks—they have shaped the way I approach challenges and work with others.
 
-
+1
